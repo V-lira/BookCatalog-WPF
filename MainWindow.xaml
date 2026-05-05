@@ -1,0 +1,35 @@
+﻿<Window x:Class="BookCatalogApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookCatalogApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#FF95A0FF">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- тут то, во что вводить -->
+        <TextBox x:Name="TitleBox" Width="150" Margin="75,5,555,5" Background="#FF3A4280" Foreground="White" FontFamily="Segoe Print" />
+        <TextBox x:Name="AuthorBox" Width="150" Margin="304,5,326,5" Background="#FF3A4280" Foreground="White" FontFamily="Segoe Print"/>
+        <TextBox x:Name="YearBox" Width="100" Margin="497,5,183,5" Background="#FF3A4280" Foreground="White" FontFamily="Segoe Print" />
+
+        <!-- КНОПКИ КНОПКИ КНОПКИ -->
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
+            <Button Content="Добавить" Width="100" Margin="5" Click="Add_Click" FontFamily="Segoe Print" Background="#FFB8D0FF"/>
+            <Button Content="Удалить" Width="100" Margin="5" Click="Delete_Click" FontFamily="Segoe Print" Background="#FFB8D0FF"/>
+            <Button Content="Найти" Width="100" Margin="5" Click="Search_Click" FontFamily="Segoe Print" Background="#FFB8D0FF"/>
+            <Button Content="Обновить" Width="100" Margin="5" Click="Refresh_Click" FontFamily="Segoe Print" Background="#FFB8D0FF"/>
+        </StackPanel>
+
+        <!-- Таблица ТУТ + текст, да... -->
+        <DataGrid x:Name="BooksGrid" Grid.Row="2" AutoGenerateColumns="True" Background="#FF3A4280"/>
+        <Label Content="ПИСАТЕЛЬ" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Segoe Print" Width="90" FontSize="11"/>
+        <Label Content="НАЗВАНИЕ" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="228,0,0,0" FontFamily="Segoe Print" Width="90" FontSize="11"/>
+        <Label Content="ГОД" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="459,0,0,0" FontFamily="Segoe Print" Width="38" FontSize="11"/>
+    </Grid>
+</Window>
